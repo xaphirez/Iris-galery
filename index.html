@@ -1,0 +1,188 @@
+<!DOCTYPE html>
+<html lang="id">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Anya Art — Portfolio</title>
+  <meta name="description" content="Art portfolio of Anya — illustrations, sketches, and digital art." />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:ital,wght@0,400;0,700;1,400&family=Inter:wght@300;400;500&display=swap" rel="stylesheet" />
+  <link rel="stylesheet" href="css/style.css" />
+</head>
+<body>
+
+  <!-- NAVIGATION -->
+  <nav class="nav" id="nav">
+    <a href="#" class="nav-logo">Anya Art</a>
+    <button class="nav-toggle" id="navToggle" aria-label="Toggle menu">
+      <span></span><span></span><span></span>
+    </button>
+    <ul class="nav-links" id="navLinks">
+      <li><a href="#gallery">Gallery</a></li>
+      <li><a href="#about">About</a></li>
+      <li><a href="#contact">Contact</a></li>
+    </ul>
+  </nav>
+
+  <!-- HERO -->
+  <section class="hero">
+    <div class="hero-bg" aria-hidden="true">
+      <div class="blob blob-1"></div>
+      <div class="blob blob-2"></div>
+      <div class="blob blob-3"></div>
+    </div>
+    <div class="hero-content">
+      <p class="eyebrow">✦ Art Portfolio</p>
+      <h1>Where <em>imagination</em><br>meets ink &amp; pixel</h1>
+      <p class="hero-sub">A collection of illustrations, sketches, and digital art — each piece a small world of its own.</p>
+      <a href="#gallery" class="btn-outline">Explore Gallery</a>
+    </div>
+  </section>
+
+  <!-- GALLERY -->
+  <section class="section" id="gallery">
+    <div class="section-header">
+      <p class="eyebrow">✦ Works</p>
+      <h2>Gallery</h2>
+    </div>
+
+    <!-- FILTER BAR -->
+    <div class="filter-bar" role="group" aria-label="Filter gallery">
+      <button class="filter-btn active" data-filter="all">All</button>
+      <button class="filter-btn" data-filter="digital">Digital</button>
+      <button class="filter-btn" data-filter="sketch">Sketches</button>
+      <button class="filter-btn" data-filter="character">Character</button>
+      <button class="filter-btn" data-filter="landscape">Landscape</button>
+    </div>
+
+    <!-- GALLERY GRID -->
+    <!--
+      =====================================================================
+      CARA MENAMBAH GAMBAR BARU:
+      1. Simpan file gambar ke folder: images/gallery/
+      2. Salin blok <div class="gallery-item"> di bawah
+      3. Ganti src="images/gallery/NAMA-FILE.jpg"
+      4. Ganti alt, data-title, data-year, data-filter sesuai gambar
+      5. Simpan file, push ke GitHub — selesai!
+
+      data-filter bisa diisi: digital | sketch | character | landscape
+      =====================================================================
+    -->
+    <div class="gallery-grid" id="galleryGrid">
+
+      <div class="gallery-item" data-filter="digital">
+        <img src="images/gallery/placeholder-1.jpg" alt="Dream Weaver — digital illustration" loading="lazy" />
+        <div class="gallery-overlay">
+          <h3 data-title>Dream Weaver</h3>
+          <span>Digital · 2024</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-filter="sketch">
+        <img src="images/gallery/placeholder-2.jpg" alt="Forest Letters — pencil sketch" loading="lazy" />
+        <div class="gallery-overlay">
+          <h3 data-title>Forest Letters</h3>
+          <span>Sketch · 2024</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-filter="character">
+        <img src="images/gallery/placeholder-3.jpg" alt="Inner Circle — character art" loading="lazy" />
+        <div class="gallery-overlay">
+          <h3 data-title>Inner Circle</h3>
+          <span>Character · 2024</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-filter="digital">
+        <img src="images/gallery/placeholder-4.jpg" alt="Sacred Geometry — digital art" loading="lazy" />
+        <div class="gallery-overlay">
+          <h3 data-title>Sacred Geometry</h3>
+          <span>Digital · 2023</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-filter="landscape">
+        <img src="images/gallery/placeholder-5.jpg" alt="Flow State — landscape" loading="lazy" />
+        <div class="gallery-overlay">
+          <h3 data-title>Flow State</h3>
+          <span>Landscape · 2023</span>
+        </div>
+      </div>
+
+      <div class="gallery-item" data-filter="sketch">
+        <img src="images/gallery/placeholder-6.jpg" alt="Golden Hour — sketch" loading="lazy" />
+        <div class="gallery-overlay">
+          <h3 data-title>Golden Hour</h3>
+          <span>Sketch · 2023</span>
+        </div>
+      </div>
+
+    </div><!-- end .gallery-grid -->
+  </section>
+
+  <!-- ABOUT -->
+  <section class="about-section" id="about">
+    <div class="about-img-wrap">
+      <!--
+        Ganti src di bawah dengan foto kakak:
+        <img src="images/about/photo.jpg" alt="Anya" />
+      -->
+      <div class="about-img-placeholder" aria-hidden="true">
+        <svg width="90" height="90" viewBox="0 0 90 90" fill="none" xmlns="http://www.w3.org/2000/svg">
+          <circle cx="45" cy="34" r="18" fill="#C9A7F4" opacity="0.4"/>
+          <ellipse cx="45" cy="76" rx="28" ry="18" fill="#F4A7C3" opacity="0.3"/>
+        </svg>
+        <p>Foto kakak<br/>di sini</p>
+      </div>
+    </div>
+    <div class="about-text">
+      <p class="eyebrow" style="color: #F4E4A7;">✦ About the Artist</p>
+      <h2>Hello, I'm <span class="artist-name">Anya</span></h2>
+      <p class="bio" id="bio1">A self-taught artist with a love for blending the tactile feel of hand-drawn sketches with the limitless possibilities of digital art. Every piece starts with a feeling — and ends with a world you can step into.</p>
+      <p class="bio" id="bio2">Based in Indonesia, drawing since childhood, and always chasing the next idea.</p>
+      <div class="stats">
+        <div class="stat">
+          <span class="stat-num" id="stat-artworks">40+</span>
+          <span class="stat-label">Artworks</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num" id="stat-years">3</span>
+          <span class="stat-label">Years creating</span>
+        </div>
+        <div class="stat">
+          <span class="stat-num">2</span>
+          <span class="stat-label">Styles</span>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <!-- CONTACT -->
+  <section class="contact-section" id="contact">
+    <p class="eyebrow">✦ Get in touch</p>
+    <h2>Let's connect</h2>
+    <p class="contact-sub">Commission inquiries, collaborations, or just saying hi — all welcome.</p>
+    <div class="social-links">
+      <a id="btn-instagram" href="#" class="social-btn" target="_blank" rel="noopener">📷 Instagram</a>
+      <a id="btn-email" href="#" class="social-btn">✉️ Email</a>
+      <a id="btn-whatsapp" href="#" class="social-btn" target="_blank" rel="noopener">💬 WhatsApp</a>
+    </div>
+  </section>
+
+  <!-- LIGHTBOX -->
+  <div class="lightbox" id="lightbox" role="dialog" aria-modal="true" aria-label="Image viewer">
+    <button class="lightbox-close" id="lightboxClose" aria-label="Close">✕</button>
+    <img src="" alt="" id="lightboxImg" />
+    <p class="lightbox-caption" id="lightboxCaption"></p>
+  </div>
+
+  <footer class="footer">
+    <span>© 2024 Anya Art — All rights reserved</span>
+    <span>Made with ♥ in Indonesia</span>
+  </footer>
+
+  <script src="js/main.js"></script>
+</body>
+</html>
